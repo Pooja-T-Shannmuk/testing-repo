@@ -1,2 +1,35 @@
-print('Hi, there !)
-print('I am robo')
+{
+	"jobConfig": {
+		"name": "test glue job",
+		"description": "",
+		"role": "arn:aws:iam::982586453799:role/glue-iam-role",
+		"command": "glueetl",
+		"version": "3.0",
+		"workerType": "G.1X",
+		"numberOfWorkers": 2,
+		"maxCapacity": 2,
+		"maxRetries": 3,
+		"timeout": 5,
+		"maxConcurrentRuns": 1,
+		"security": "none",
+		"scriptName": "test.py",
+		"scriptLocation": "s3://aws-glue-scripts-982586453799-us-east-1/kavya@helicaltech.com/",
+		"language": "python-3",
+		"jobParameters": [],
+		"tags": [],
+		"jobMode": "DEVELOPER_MODE",
+		"createdOn": "2023-04-10T11:00:56.238Z",
+		"developerMode": false,
+		"connectionsList": [],
+		"etlAutoTuning": true,
+		"flexExecution": false,
+		"minFlexWorkers": null,
+		"sourceControlDetails": {
+			"Provider": "GITHUB",
+			"Repository": "testing-repo",
+			"Branch": "main"
+		}
+	},
+	"hasBeenSaved": false,
+	"script": "print(\"Hello world\")"
+}
