@@ -1,0 +1,31 @@
+{
+  "name" : "test glue job",
+  "description" : "",
+  "role" : "arn:aws:iam::982586453799:role/glue-iam-role",
+  "executionProperty" : {
+    "maxConcurrentRuns" : 1
+  },
+  "command" : {
+    "name" : "glueetl",
+    "scriptLocation" : "s3://aws-glue-scripts-982586453799-us-east-1/kavya@helicaltech.com/test.py",
+    "pythonVersion" : "3"
+  },
+  "defaultArguments" : {
+    "--enable-job-insights" : "true",
+    "--job-language" : "python"
+  },
+  "maxRetries" : 1,
+  "allocatedCapacity" : 2,
+  "timeout" : 5,
+  "maxCapacity" : 2.0,
+  "glueVersion" : "3.0",
+  "numberOfWorkers" : 2,
+  "workerType" : "G.1X",
+  "executionClass" : "STANDARD",
+  "sourceControlDetails" : {
+    "provider" : "GITHUB",
+    "repository" : "testing-repo",
+    "branch" : "main",
+    "folder" : "test glue job"
+  }
+}
